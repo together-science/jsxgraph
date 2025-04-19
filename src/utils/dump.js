@@ -281,6 +281,10 @@ JXG.Dump = {
     toJCAN: function (obj) {
         var i, list, prop;
 
+        if (obj === null) {
+            return "null";
+        }
+
         switch (typeof obj) {
             case "object":
                 if (obj) {
@@ -308,8 +312,6 @@ JXG.Dump = {
             case "number":
             case "boolean":
                 return obj.toString();
-            case "null":
-                return "null";
         }
     },
 

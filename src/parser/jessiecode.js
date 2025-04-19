@@ -662,7 +662,7 @@ JXG.extend(JXG.JessieCode.prototype, /** @lends JXG.JessieCode.prototype */ {
 
                     /*jslint evil:true*/
                     // fun = eval(str);
-                    fun = eval(str)(jc);
+                    // fun = eval(str)(jc);
                     /*jslint evil:false*/
 
                     scope.argtypes = [];
