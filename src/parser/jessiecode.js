@@ -661,7 +661,7 @@ JXG.extend(JXG.JessieCode.prototype, /** @lends JXG.JessieCode.prototype */ {
                     // the str is well defined and there is no user input in it that we didn't check before
 
                     /*jslint evil:true*/
-                    if (typeof TS_EXTENSION === "undefined") {
+                    if (typeof window["TS_EXTENSION"] === "undefined") {
                         fun = eval(str);
                     }
                     // fun = eval(str)(jc);
