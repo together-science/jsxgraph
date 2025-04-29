@@ -661,7 +661,9 @@ JXG.extend(JXG.JessieCode.prototype, /** @lends JXG.JessieCode.prototype */ {
                     // the str is well defined and there is no user input in it that we didn't check before
 
                     /*jslint evil:true*/
-                    // fun = eval(str);
+                    if (typeof TS_EXTENSION === "undefined") {
+                        fun = eval(str);
+                    }
                     // fun = eval(str)(jc);
                     /*jslint evil:false*/
 
@@ -856,11 +858,6 @@ JXG.extend(JXG.JessieCode.prototype, /** @lends JXG.JessieCode.prototype */ {
                 default:
                     result = false;
             }
-        } catch (e) {  // catch is mandatory in old IEs
-            // console.log(e);
-            // We throw the error again,
-            // so the user can catch it.
-            throw e;
         } finally {
             // make sure the original text method is back in place
             if (Text) {
