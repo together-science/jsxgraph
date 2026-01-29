@@ -3661,6 +3661,8 @@ declare namespace JXG {
     export interface Polygon3DAttributes extends PolygonAttributes {}
 
     export interface Polygon3D extends Polygon {}
+
+    export interface Sphere3D extends Plane3D {}
     
     export interface Circle3DAttributes extends GeometryElementAttributes {}
 
